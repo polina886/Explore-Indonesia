@@ -52,6 +52,10 @@
     align-items: center;
     gap: 20px;
 
+    @media (min-width:576px) { 
+      flex-direction: column;
+     }
+
     @media (min-width: 768px) {
       flex: 0 1 calc(50% - 30px);
       text-align: left;
