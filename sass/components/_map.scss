@@ -32,13 +32,13 @@
             content: '';
             position: absolute;
             left: 15px; 
-            top: 0;
-            bottom: 0;
+            top: 15px;
             width: 1px;
             z-index: 1;
 
             @media (min-width: 768px) {
                 left: 20px;
+                top: 20px;
             }
         }
     }
@@ -89,7 +89,6 @@
 
     &__text {
         font-size: 16px;
-        line-height: 1.6;
         color: $color-grey;
         margin-bottom: 20px;
         font-family: $font-main;
@@ -103,7 +102,7 @@
 
         @media (min-width: 768px) {
             flex-direction: row;
-            align-items: flex-start;
+            align-items: center;
         }
 
         img {
@@ -116,5 +115,15 @@
         .map__content {
             padding-top: 0;
         }
+
+        .map__sub__title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__button {
+        @include button-style($color-white, $color-red, $font-accent);
     }
 }

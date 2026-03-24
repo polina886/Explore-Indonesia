@@ -303,14 +303,14 @@
   content: "";
   position: absolute;
   left: 15px;
-  top: 0;
-  bottom: 0;
+  top: 15px;
   width: 1px;
   z-index: 1;
 }
 @media (min-width: 768px) {
   .map__list::before {
     left: 20px;
+    top: 20px;
   }
 }
 .map__item {
@@ -355,7 +355,6 @@
 }
 .map__text {
   font-size: 16px;
-  line-height: 1.6;
   color: #6F7787;
   margin-bottom: 20px;
   font-family: "DM Sans", sans-serif;
@@ -369,7 +368,7 @@
 @media (min-width: 768px) {
   .map__sub__info {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
   }
 }
 .map__sub__info img {
@@ -381,6 +380,30 @@
 }
 .map__sub__info .map__content {
   padding-top: 0;
+}
+.map__sub__info .map__sub__title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.map__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 40px;
+  border-radius: 50px;
+  background-color: #DD2242;
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.map__button:hover {
+  transform: scale(1.05);
+  background-color: rgb(226, 235.6666666667, 240.5);
 }
 
 .footer {
@@ -520,4 +543,8 @@
   border-left: 3px solid white;
   transform: rotate(45deg);
   margin-top: 8px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
